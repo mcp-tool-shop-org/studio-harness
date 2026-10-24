@@ -8,10 +8,11 @@ pins each one to an exact commit and tests them together.
 
 - `pins.json`: the commit each tool is tested at. A pin never floats. It moves by pull request.
 - `scripts/scan.mjs`: a class-pattern scanner run on every tracked file in CI. It flags home and machine paths,
-  personal emails, unhashed account ids, tokens, JWTs and private keys, and reports file:line:class only.
+  personal emails, unhashed account ids, tokens, XRPL seeds, JWTs, private keys and tailnet hosts, and reports
+  file:line:class only.
 - `tests/`: unit tests here, and cross-tool tests against the pinned tools as they land.
 
-The harness, fixtures and cross tests are added by pull request. The plan is in `docs/` once PR 1 lands.
+The harness, fixtures and cross tests are added by pull request. The plan is in `docs/`.
 
 ## Rules
 
