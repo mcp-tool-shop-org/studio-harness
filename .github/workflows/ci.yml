@@ -52,7 +52,7 @@ jobs:
       - name: Unit tests
         run: npm test
 
-      # Cross tests run once pins.json lists tools (PR 2). Until then, the fetch and cross steps are skipped.
+      # Cross tests run once pins.json lists tools (the harness PR). Until then, the fetch and cross steps are skipped.
       - name: Count pinned tools
         id: pins
         run: echo "count=$(node -e 'console.log(Object.keys(JSON.parse(require("fs").readFileSync("pins.json","utf8")).tools).length)')" >> "$GITHUB_OUTPUT"

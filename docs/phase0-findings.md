@@ -15,7 +15,7 @@
 - **The tally:** of the 17 candidate gaps the plan listed, all 17 were confirmed by running, and 4 new ones turned up.
 
 This summary is written fresh from the run's local gap report, which stays outside the repo because it quotes real
-receipts. The probes that showed each gap move into `tests/cross/` (PR 2), where each one asserts its gap is present
+receipts. The probes that showed each gap move into `tests/cross/` (the harness PR), where each one asserts its gap is present
 at the pins above and flips when a fix lands.
 
 ## The replay itself worked

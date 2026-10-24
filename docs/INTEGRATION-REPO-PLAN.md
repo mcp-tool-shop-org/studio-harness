@@ -115,7 +115,7 @@ After the move, `<trio-runs>/` keeps `out/` and a README pointing at the repo.
   2. `npm run scan`, the class-pattern scanner over every tracked file;
   3. unit tests;
   4. if `pins.json` has entries: `fetch-pins`, then the published-surface check, then `npm run cross`;
-  5. coverage on `harness/`, with the floor enforced from PR 2 on (first measurement rounded down, ratcheting toward
+  5. coverage on `harness/`, with the floor enforced from the harness PR on (first measurement rounded down, ratcheting toward
      90);
   6. `npx --yes @dogfood-lab/atlas@1.24.0 check`.
 - **Secrets:** none.
@@ -133,7 +133,7 @@ After the move, `<trio-runs>/` keeps `out/` and a README pointing at the repo.
    - **After the push:** CI is green on that sha.
 2. **PR 1, docs:** PLAN.md, STUDIO-CONTEXT.md, this plan, and phase0-findings.md. CI passes, since pins are still
    empty.
-3. **PR 2, the harness:**
+3. **The harness PR:**
    - `harness/lib` and `phase0/replay.mjs`;
    - fixtures with their manifest;
    - unit tests and `tests/cross/` with the 15 probes;
@@ -176,7 +176,7 @@ After the move, `<trio-runs>/` keeps `out/` and a README pointing at the repo.
 | 4: the queue store boundary | `out/queue-store/`, gitignored, and `queue.mjs --store` |
 | 5: split replay.mjs | Job A becomes the CLI, and Job B becomes `tests/cross/`, using tmpdir and a windows manifest |
 | 6: the scanner in CI | `scripts/scan.mjs` (class patterns), plus the local needle scan before every push |
-| 7: pins and coverage-floor order | An empty pins file skips the fetch and cross steps. The floor starts in PR 2 |
+| 7: pins and coverage-floor order | An empty pins file skips the fetch and cross steps. The floor starts in the harness PR |
 | 8: tests moving from gaps to passes | `capabilities.json`, flipped in the same PR as the pin bump |
 
 ## Departures from Argon's advice
