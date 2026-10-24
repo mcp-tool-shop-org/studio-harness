@@ -1,0 +1,15 @@
+{
+  "name": "studio-harness",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Integration harness for Attestia, Cognate, RepoMesh and interlock, tested together at pinned commits",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"tests/unit/**/*.test.mjs\"",
+    "scan": "node scripts/scan.mjs"
+  }
+}

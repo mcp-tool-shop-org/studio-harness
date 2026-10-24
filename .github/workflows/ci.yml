@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "harness/**"
+      - "scripts/**"
+      - "tests/**"
+      - "fixtures/**"
+      - "pins.json"
+      - "capabilities.json"
+      - "package.json"
+      - "package-lock.json"
+      - "atlas/**"
+      - ".github/workflows/**"
+  # No paths filter on pull requests, deliberately: this workflow emits the required status check, and a PR that
+  # matched no path (a docs-only change) would never report it and could never merge. Pushes to main stay paths-gated.
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      override:
+        description: "Test one tool at a candidate commit: <tool>=<40-char sha> (cross tests, once they exist)"
+        required: false
+        default: ""
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scan tracked files (class patterns only)
+        run: npm run scan
+
+      - name: Unit tests
+        run: npm test
+
+      # Cross tests run once pins.json lists tools (PR 2). Until then, the fetch and cross steps are skipped.
+      - name: Count pinned tools
+        id: pins
+        run: echo "count=$(node -e 'console.log(Object.keys(JSON.parse(require("fs").readFileSync("pins.json","utf8")).tools).length)')" >> "$GITHUB_OUTPUT"
+
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+        if: steps.pins.outputs.count != '0'
+        with:
+          version: 10
+
+      - uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86 # v5.4.2
+        if: steps.pins.outputs.count != '0'
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and build pinned tools, then cross tests
+        if: steps.pins.outputs.count != '0'
+        env:
+          OVERRIDE: ${{ inputs.override }}
+        run: |
+          node scripts/fetch-pins.mjs
+          npm run cross
+
+      - name: Atlas check
+        run: npx --yes @dogfood-lab/atlas@1.24.0 check

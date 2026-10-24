@@ -1,0 +1,18 @@
+summary: "Integration harness for Attestia, Cognate, RepoMesh and interlock, tested together at pinned commits."
+boundaries:
+  - name: .github
+    globs:
+      - .github/**
+    role: config
+  - name: root
+    globs:
+      - "*"
+    role: config
+  - name: scripts
+    globs:
+      - scripts/**
+    role: code
+  - name: tests
+    globs:
+      - tests/**
+    role: test
