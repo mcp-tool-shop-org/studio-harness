@@ -1,16 +1,17 @@
 # studio-harness: how it works
 
-Mapped at 2026-10-24 from commit b2b3fa1 by Atlas 1.24.0.
+Mapped at 2026-10-24 from commit 3221d02 by Atlas 1.24.0.
 
 ## What this is
 
 Integration harness for Attestia, Cognate, RepoMesh and interlock, tested together at pinned commits. (written by a person)
 
-4 parts, mostly JavaScript (2 files). Work enters through 1 door; the busiest is CI, which reaches 2 parts.
+5 parts, mostly JavaScript (2 files). Work enters through 1 door; the busiest is CI, which reaches 2 parts.
 
-## What changed since the last map
+## What changed since 2026-10-24 (b2b3fa1)
 
-This is the first map.
+- docs is a new part, drawn from `docs/**`.
+- 4 files added and 1 changed content, across 2 parts.
 
 ## What comes in
 
@@ -53,7 +54,7 @@ Nothing in this repository writes to a tracked place this map can see.
 
 ## Hand-authored
 
-People write .github/ and the repository root. Nothing in this repository writes to them.
+People write .github/, docs/ and the repository root. Nothing in this repository writes to them.
 
 ## Where to start
 
@@ -64,6 +65,6 @@ Read those in order to follow one pull request end to end.
 ## What this map cannot see
 
 - 1 read uses a path built at run time and is not named here.
-- Statistics confidence is low: fewer than 30 qualifying commits in the window, and fewer than 20 source files reach 10 revisions.
+- Statistics confidence is low: fewer than 30 qualifying commits in the window, and fewer than 25 source files reach 10 revisions.
 
 Regenerate with `npx --yes @dogfood-lab/atlas map`.
