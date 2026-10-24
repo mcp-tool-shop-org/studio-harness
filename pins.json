@@ -1,3 +1,30 @@
 {
-  "tools": {}
+  "tools": {
+    "attestia": {
+      "repo": "mcp-tool-shop-org/attestia",
+      "sha": "bd0176d986ef45f28c3d7564c32fdb53b71f93cb",
+      "version": "2.1.0",
+      "toolchain": "pnpm"
+    },
+    "cognate": {
+      "repo": "mcp-tool-shop-org/cognate",
+      "sha": "eea65c6baf677e4a39de12b66e7555df0aefa768",
+      "version": "0.1.8",
+      "toolchain": "pnpm",
+      "links": { "@mcptoolshop/attestia": "attestia/packages/attestia" }
+    },
+    "repomesh": {
+      "repo": "mcp-tool-shop-org/repomesh",
+      "sha": "67079b443f7f17d2e6fb84184bea3d5428fb24cf",
+      "version": "2.3.3",
+      "toolchain": "npm",
+      "installDirs": [".", "ledger", "anchor/xrpl"]
+    },
+    "interlock": {
+      "repo": "mcp-tool-shop-org/interlock",
+      "sha": "7fbc75bb9a882000bfed9a6db245ea79071b1692",
+      "version": "0.2.0",
+      "toolchain": "uv"
+    }
+  }
 }
