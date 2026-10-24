@@ -2,14 +2,13 @@
 
 ## Reporting
 
-Report a vulnerability privately through GitHub's "Report a vulnerability" (Security advisories) on this repository.
-Don't open a public issue.
+Report a vulnerability privately by email to rnd@mcptoolshop.com. Don't open a public issue.
 
 ## What this repo holds
 
 - Harness code, synthetic fixtures, tool pins and tests. No real records, receipts, keys, seeds or tokens.
 - CI needs no secrets. `scripts/scan.mjs` runs on every tracked file and fails the build on a home or machine path,
-  a personal email, an unhashed account id, a token, a JWT or a private key.
+  a personal email, an unhashed account id, a token, an XRPL seed, a JWT, a private key or a tailnet host.
 
 ## Advisories
 
