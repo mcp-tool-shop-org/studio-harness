@@ -16,9 +16,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-// Addresses that name no person: GitHub's noreply domain, the studio's own domain, the documentation domains.
-const EMAIL_ALLOW =
-  /@(?:users\.noreply\.github\.com|noreply\.github\.com|anthropic\.com|mcptoolshop\.com|example\.(?:com|org|net))$/i;
+// Addresses that name no person. Exact addresses, never a whole real domain: a domain-wide allow would pass a
+// personal address on that domain. GitHub's per-user noreply aliases and the documentation domains are whole by
+// design (they can't receive mail).
+const EMAIL_ALLOW_EXACT = new Set(["rnd@mcptoolshop.com", "noreply@anthropic.com", "noreply@github.com"]);
+const EMAIL_ALLOW_DOMAIN = /@(?:users\.noreply\.github\.com|example\.(?:com|org|net))$/i;
+const emailAllowed = (addr) => EMAIL_ALLOW_EXACT.has(addr.toLowerCase()) || EMAIL_ALLOW_DOMAIN.test(addr);
 
 // Keys whose value names an account; the trio's identity rule stores them as sha256 only.
 const ACCOUNT_KEYS = [
@@ -89,7 +92,7 @@ export function scanText(text) {
     const found = new Set();
     for (const v of views(ln)) {
       for (const [cls, re] of CLASS_PATTERNS) if (re.test(v)) found.add(cls);
-      for (const m of v.matchAll(EMAIL_RE)) if (!EMAIL_ALLOW.test(m[0])) found.add("email");
+      for (const m of v.matchAll(EMAIL_RE)) if (!emailAllowed(m[0])) found.add("email");
     }
     for (const cls of found) hits.push({ line: i + 1, cls });
   });

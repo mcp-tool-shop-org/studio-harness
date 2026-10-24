@@ -31,7 +31,12 @@ const CAUGHT = {
     j("/cyg", "drive/", "e/work"),
     j("\\\\", "rig-host", "\\", "share"),
   ],
-  email: [j("someone", "@", "mail", ".example-provider.com")],
+  email: [
+    j("someone", "@", "mail", ".example-provider.com"),
+    // A personal address on an allowed sender's own domain is still a hit: only exact addresses are allowed.
+    j("firstname-lastname", "@", "mcptoolshop", ".com"),
+    j("someone", "@", "anthropic", ".com"),
+  ],
   "account-id": [
     j('{"', GR, '": "', "someone/models", '"}'),
     j(GR, ": ", "someone/models"),
@@ -71,7 +76,9 @@ test("honest content passes", () => {
   const clean = [
     "https://github.com/mcp-tool-shop-org/studio-harness",
     j("64996768+mcp-tool-shop", "@", "users.noreply.github.com"),
-    j("security", "@", "mcptoolshop.com"),
+    j("rnd", "@", "mcptoolshop.com"),
+    j("noreply", "@", "anthropic.com"),
+    j("noreply", "@", "github.com"),
     "npx --yes @dogfood-lab/atlas@1.24.0 check and pkg@1.24.0-beta.rc",
     j('{"', GR, '": "', "a".repeat(64), '"}'),
     j(GR, ": ", "a".repeat(64)),
