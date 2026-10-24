@@ -1,6 +1,7 @@
 {
   "authored": [
     ".github/",
+    "docs/",
     "root"
   ],
   "breaks": [
@@ -16,16 +17,41 @@
     }
   ],
   "changes": {
-    "first": true
+    "fileCounts": {
+      "added": 4,
+      "changed": 1,
+      "moved": 0,
+      "parts": 2,
+      "removed": 0
+    },
+    "items": [
+      {
+        "kind": "part",
+        "sentence": "docs is a new part, drawn from `docs/**`.",
+        "subjects": [
+          "docs"
+        ]
+      },
+      {
+        "kind": "counts",
+        "sentence": "4 files added and 1 changed content, across 2 parts.",
+        "subjects": []
+      }
+    ],
+    "since": {
+      "commit": "b2b3fa10147643f0b5213c525b2a23f627a447bb",
+      "generatedAt": "2026-10-24T07:42:01.595Z"
+    },
+    "unchanged": false
   },
   "changesTogether": [],
   "changesTogetherNote": [
     "Window: 180 days; a pair counts from 3 shared commits, since the window holds fewer than 30 qualifying commits."
   ],
   "changesTogetherWithTests": 0,
-  "commit": "b2b3fa10147643f0b5213c525b2a23f627a447bb",
-  "defaultBranch": "main",
-  "derived": "4 parts, mostly JavaScript (2 files). Work enters through 1 door; the busiest is CI, which reaches 2 parts.",
+  "commit": "3221d02b41351af8b84fffda4a58e348d22726f1",
+  "defaultBranch": "docs/plan-and-findings",
+  "derived": "5 parts, mostly JavaScript (2 files). Work enters through 1 door; the busiest is CI, which reaches 2 parts.",
   "doors": [
     {
       "checks": [],
@@ -72,19 +98,20 @@
   "edges": [],
   "engine": "1.24.0",
   "generated": [],
-  "generatedAt": "2026-10-24T07:42:01.595Z",
+  "generatedAt": "2026-10-24T07:46:07.937Z",
   "limits": [
     "1 read uses a path built at run time and is not named here.",
-    "Statistics confidence is low: fewer than 30 qualifying commits in the window, and fewer than 20 source files reach 10 revisions."
+    "Statistics confidence is low: fewer than 30 qualifying commits in the window, and fewer than 25 source files reach 10 revisions."
   ],
   "mainDoor": ".github/workflows/ci.yml",
   "partLabels": {
     ".github": ".github",
+    "docs": "docs",
     "root": "the repository root",
     "scripts": "scripts",
     "tests": "tests"
   },
-  "parts": 4,
+  "parts": 5,
   "readers": [],
   "repo": "mcp-tool-shop-org/studio-harness",
   "sequences": [],

@@ -32,6 +32,41 @@
       "externals": 0,
       "files": [
         {
+          "hash": "65db47de24ff1aea5018848fc1c64db1c4ab32547f8608f8f296c9ee68dff7e6",
+          "path": "docs/INTEGRATION-REPO-PLAN.md"
+        },
+        {
+          "hash": "29912abaadab8499af33343da9eead94337845e9b24ce0c449e85b0d1716689d",
+          "path": "docs/PLAN.md"
+        },
+        {
+          "hash": "a8fbad6f4d0fd148c388dbe49f8f9e424b2d814672ba137797b5b77ad4580080",
+          "path": "docs/STUDIO-CONTEXT.md"
+        },
+        {
+          "hash": "fffc81d952fe385945f01c8610ce42484efa67ab573650f6212ac7393df9aed6",
+          "path": "docs/phase0-findings.md"
+        }
+      ],
+      "globs": [
+        "docs/**"
+      ],
+      "importConfidence": "full",
+      "name": "docs",
+      "origin": "authored",
+      "role": "docs",
+      "testedBy": 0,
+      "unresolvedSites": 0
+    },
+    {
+      "dynamicReads": 0,
+      "dynamicSpawns": 0,
+      "dynamicSpawnsInTests": 0,
+      "dynamicWrites": 0,
+      "entryPoints": [],
+      "externals": 0,
+      "files": [
+        {
           "hash": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
           "path": ".gitattributes"
         },
@@ -40,7 +75,7 @@
           "path": ".gitignore"
         },
         {
-          "hash": "3b91e73aef0c0268bf77c30b1bfcbda8bc8c0610e12a2c6c2c6ab28022259e84",
+          "hash": "574ff547577e38eca5387a8f5fbcb91eaf3a112075fc45d57e6a1e1c5c041234",
           "path": "CHANGELOG.md"
         },
         {
@@ -360,8 +395,8 @@
   ],
   "engine": "1.24.0",
   "generatedFrom": {
-    "commit": "b2b3fa10147643f0b5213c525b2a23f627a447bb",
-    "tracked": 12
+    "commit": "3221d02b41351af8b84fffda4a58e348d22726f1",
+    "tracked": 16
   },
   "landings": [
     {

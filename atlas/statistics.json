@@ -7,7 +7,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": true,
+        "collapsed": false,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": []
@@ -23,7 +23,23 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": true,
+        "collapsed": false,
+        "confidence": "low",
+        "importsAndCoChanges": [],
+        "importsOnly": []
+      },
+      "cohesion": null,
+      "cohesionDropped": false,
+      "confidence": "low",
+      "highWater": null,
+      "name": "docs",
+      "qualifyingSourceCommits": 0,
+      "rebaseline": null
+    },
+    {
+      "breakage": {
+        "coChangesOnly": [],
+        "collapsed": false,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": []
@@ -39,7 +55,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": true,
+        "collapsed": false,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": [
@@ -57,7 +73,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": true,
+        "collapsed": false,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": []
@@ -90,8 +106,8 @@
         "path": ".gitignore"
       },
       {
-        "commits": 1,
-        "lines": 6,
+        "commits": 2,
+        "lines": 8,
         "path": "CHANGELOG.md"
       },
       {
@@ -111,8 +127,48 @@
       },
       {
         "commits": 1,
+        "lines": 69,
+        "path": "atlas/README.md"
+      },
+      {
+        "commits": 1,
         "lines": 18,
         "path": "atlas/boundaries.yaml"
+      },
+      {
+        "commits": 1,
+        "lines": 109,
+        "path": "atlas/page.json"
+      },
+      {
+        "commits": 1,
+        "lines": 193,
+        "path": "atlas/statistics.json"
+      },
+      {
+        "commits": 1,
+        "lines": 383,
+        "path": "atlas/structure.json"
+      },
+      {
+        "commits": 1,
+        "lines": 206,
+        "path": "docs/INTEGRATION-REPO-PLAN.md"
+      },
+      {
+        "commits": 1,
+        "lines": 155,
+        "path": "docs/PLAN.md"
+      },
+      {
+        "commits": 1,
+        "lines": 49,
+        "path": "docs/STUDIO-CONTEXT.md"
+      },
+      {
+        "commits": 1,
+        "lines": 106,
+        "path": "docs/phase0-findings.md"
       },
       {
         "commits": 1,
@@ -143,15 +199,15 @@
   },
   "confidence": {
     "level": "low",
-    "reason": "fewer than 30 qualifying commits in the window, and fewer than 20 source files reach 10 revisions"
+    "reason": "fewer than 30 qualifying commits in the window, and fewer than 25 source files reach 10 revisions"
   },
-  "generatedAt": "2026-10-24T07:42:01.595Z",
+  "generatedAt": "2026-10-24T07:46:07.937Z",
   "generatedFrom": {
-    "commit": "b2b3fa10147643f0b5213c525b2a23f627a447bb"
+    "commit": "3221d02b41351af8b84fffda4a58e348d22726f1"
   },
   "pairs": [],
   "parameters": {
-    "appliedChangesetLimit": 3.25,
+    "appliedChangesetLimit": 5.25,
     "changeset": 50,
     "changesetFraction": 0.25,
     "cohesionDrop": 0.2,
@@ -160,16 +216,16 @@
     "floor": "fallen",
     "floorHeld": false,
     "floorTrigger": "both",
-    "headDate": "2026-10-24T03:41:59-04:00",
-    "inScopeFiles": 13,
+    "headDate": "2026-10-24T03:45:08-04:00",
+    "inScopeFiles": 21,
     "pinnedStart": null,
-    "priorFloor": null,
-    "qualifyingCommits": 0,
+    "priorFloor": "fallen",
+    "qualifyingCommits": 1,
     "qualifyingMinimum": 30,
     "revisions": 5,
     "shared": 10,
     "sharedFloorUsed": 3,
-    "since": "2026-04-27T07:41:59.000Z",
+    "since": "2026-04-27T07:45:08.000Z",
     "sourceExtensions": [
       ".js",
       ".mjs",
