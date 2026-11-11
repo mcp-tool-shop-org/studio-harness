@@ -9,7 +9,7 @@
       "externals": 0,
       "files": [
         {
-          "hash": "53180d6a3763382bf88ea4aefed3a119d41c2fd8515d23fd0a9d41950216640a",
+          "hash": "a694ede4636293369017aa9bd059ba5aa9632028e6e6ec12a0186bc94afc8677",
           "path": ".github/workflows/ci.yml"
         }
       ],
@@ -32,7 +32,7 @@
       "externals": 0,
       "files": [
         {
-          "hash": "65db47de24ff1aea5018848fc1c64db1c4ab32547f8608f8f296c9ee68dff7e6",
+          "hash": "49362a1d841cb51289ca4b9718df02b99dc827b97c2a168e4be818f0b5f59899",
           "path": "docs/INTEGRATION-REPO-PLAN.md"
         },
         {
@@ -44,7 +44,7 @@
           "path": "docs/STUDIO-CONTEXT.md"
         },
         {
-          "hash": "fffc81d952fe385945f01c8610ce42484efa67ab573650f6212ac7393df9aed6",
+          "hash": "9755a33a18a382d113e30efaf4988c5effecbd6c6a1478d5bb92249501d4155c",
           "path": "docs/phase0-findings.md"
         }
       ],
@@ -75,7 +75,7 @@
           "path": ".gitignore"
         },
         {
-          "hash": "574ff547577e38eca5387a8f5fbcb91eaf3a112075fc45d57e6a1e1c5c041234",
+          "hash": "bac2a08c5d420ee679892414667c410f2ec835775d568ad319c2e0d17c9abafa",
           "path": "CHANGELOG.md"
         },
         {
@@ -83,11 +83,11 @@
           "path": "LICENSE"
         },
         {
-          "hash": "94cf57c1fc80f2eb399007ac16c9e8ac76e149bc5ee65f7d648e2d866e8c9723",
+          "hash": "185b456d77afd1c3006b810dcdc4362052ed65edadf2e20e314d58f6d1fcd9f8",
           "path": "README.md"
         },
         {
-          "hash": "52b8aef80ee08b00df3c5ee7db8aeff20a232f780616fa40f8b38bb0a85397ab",
+          "hash": "8d4d800b015aeba364079f3aed6d210922fdda0821da606bf83604646a0b1165",
           "path": "SECURITY.md"
         },
         {
@@ -131,15 +131,20 @@
           ],
           "failurePaths": [
             {
+              "in": "views",
               "kind": "catch",
-              "line": 67
+              "line": 76
             },
             {
               "kind": "catch",
-              "line": 74
+              "line": 120
+            },
+            {
+              "kind": "catch",
+              "line": 127
             }
           ],
-          "hash": "b7f8a8ef2445e97e50aa687087ae13b0438ed6463cc4a59dc1767beb07fb17a8",
+          "hash": "aee3a86457d8d8bf7f4c8889a5cbf79a9b60e2e66d17412bdaec04c584886b23",
           "path": "scripts/scan.mjs",
           "sequences": []
         }
@@ -166,7 +171,7 @@
       "externals": 0,
       "files": [
         {
-          "hash": "833b973b5a0df4d2a8a189b05e8dc15b2db0b4f6002c1c52b8d427949c8b5609",
+          "hash": "7c99f6fdde340e9d9bb303bf049d58c7617725e62ef5ad6fb2ff240c3435d9ca",
           "importsFiles": [
             "scripts/scan.mjs"
           ],
@@ -393,9 +398,9 @@
       "to": "scripts"
     }
   ],
-  "engine": "1.24.0",
+  "engine": "1.26.0",
   "generatedFrom": {
-    "commit": "3221d02b41351af8b84fffda4a58e348d22726f1",
+    "commit": "8055ea3e1a53caae54736598e3d60d4f330f094e",
     "tracked": 16
   },
   "landings": [

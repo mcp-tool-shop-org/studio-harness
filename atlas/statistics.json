@@ -7,7 +7,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": false,
+        "collapsed": true,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": []
@@ -23,7 +23,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": false,
+        "collapsed": true,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": []
@@ -39,7 +39,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": false,
+        "collapsed": true,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": []
@@ -55,7 +55,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": false,
+        "collapsed": true,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": [
@@ -73,7 +73,7 @@
     {
       "breakage": {
         "coChangesOnly": [],
-        "collapsed": false,
+        "collapsed": true,
         "confidence": "low",
         "importsAndCoChanges": [],
         "importsOnly": []
@@ -96,8 +96,8 @@
         "path": ".gitattributes"
       },
       {
-        "commits": 1,
-        "lines": 79,
+        "commits": 2,
+        "lines": 81,
         "path": ".github/workflows/ci.yml"
       },
       {
@@ -106,8 +106,8 @@
         "path": ".gitignore"
       },
       {
-        "commits": 2,
-        "lines": 8,
+        "commits": 3,
+        "lines": 16,
         "path": "CHANGELOG.md"
       },
       {
@@ -116,43 +116,43 @@
         "path": "LICENSE"
       },
       {
-        "commits": 1,
-        "lines": 33,
+        "commits": 2,
+        "lines": 38,
         "path": "README.md"
       },
       {
-        "commits": 1,
-        "lines": 17,
+        "commits": 2,
+        "lines": 22,
         "path": "SECURITY.md"
       },
       {
-        "commits": 1,
-        "lines": 69,
+        "commits": 2,
+        "lines": 82,
         "path": "atlas/README.md"
       },
       {
-        "commits": 1,
-        "lines": 18,
+        "commits": 2,
+        "lines": 22,
         "path": "atlas/boundaries.yaml"
       },
       {
-        "commits": 1,
-        "lines": 109,
+        "commits": 2,
+        "lines": 150,
         "path": "atlas/page.json"
       },
       {
-        "commits": 1,
-        "lines": 193,
+        "commits": 2,
+        "lines": 279,
         "path": "atlas/statistics.json"
       },
       {
-        "commits": 1,
-        "lines": 383,
+        "commits": 2,
+        "lines": 424,
         "path": "atlas/structure.json"
       },
       {
-        "commits": 1,
-        "lines": 206,
+        "commits": 2,
+        "lines": 212,
         "path": "docs/INTEGRATION-REPO-PLAN.md"
       },
       {
@@ -166,8 +166,8 @@
         "path": "docs/STUDIO-CONTEXT.md"
       },
       {
-        "commits": 1,
-        "lines": 106,
+        "commits": 2,
+        "lines": 108,
         "path": "docs/phase0-findings.md"
       },
       {
@@ -186,13 +186,13 @@
         "path": "pins.json"
       },
       {
-        "commits": 1,
-        "lines": 81,
+        "commits": 2,
+        "lines": 168,
         "path": "scripts/scan.mjs"
       },
       {
-        "commits": 1,
-        "lines": 49,
+        "commits": 2,
+        "lines": 144,
         "path": "tests/unit/scan.test.mjs"
       }
     ]
@@ -201,9 +201,9 @@
     "level": "low",
     "reason": "fewer than 30 qualifying commits in the window, and fewer than 25 source files reach 10 revisions"
   },
-  "generatedAt": "2026-10-24T07:46:07.937Z",
+  "generatedAt": "2026-11-11T22:46:37.458Z",
   "generatedFrom": {
-    "commit": "3221d02b41351af8b84fffda4a58e348d22726f1"
+    "commit": "8055ea3e1a53caae54736598e3d60d4f330f094e"
   },
   "pairs": [],
   "parameters": {
@@ -216,16 +216,16 @@
     "floor": "fallen",
     "floorHeld": false,
     "floorTrigger": "both",
-    "headDate": "2026-10-24T03:45:08-04:00",
+    "headDate": "2026-10-24T15:23:30-04:00",
     "inScopeFiles": 21,
     "pinnedStart": null,
     "priorFloor": "fallen",
-    "qualifyingCommits": 1,
+    "qualifyingCommits": 0,
     "qualifyingMinimum": 30,
     "revisions": 5,
     "shared": 10,
     "sharedFloorUsed": 3,
-    "since": "2026-04-27T07:45:08.000Z",
+    "since": "2026-04-27T19:23:30.000Z",
     "sourceExtensions": [
       ".js",
       ".mjs",
